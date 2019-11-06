@@ -1,0 +1,371 @@
+{
+	"variables": [],
+	"info": {
+		"name": "My-places",
+		"_postman_id": "741aa4ff-fd20-b218-0a08-25b6883cda91",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "account",
+			"description": "",
+			"item": [
+				{
+					"name": "create-user",
+					"request": {
+						"url": "{{url}}/create-user",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/x-www-form-urlencoded",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "email",
+									"value": "divek@email.com",
+									"type": "text",
+									"description": ""
+								},
+								{
+									"key": "name",
+									"value": "divek",
+									"type": "text",
+									"description": ""
+								},
+								{
+									"key": "password",
+									"value": "divek@123",
+									"type": "text",
+									"description": ""
+								}
+							]
+						},
+						"description": "create a user"
+					},
+					"response": []
+				},
+				{
+					"name": "get user-info",
+					"request": {
+						"url": "{{url}}/user-info/5dbfe0dc5da65d920966a69c",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/x-www-form-urlencoded",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "email",
+									"value": "divek@email.com",
+									"type": "text",
+									"description": ""
+								},
+								{
+									"key": "name",
+									"value": "divek",
+									"type": "text",
+									"description": ""
+								},
+								{
+									"key": "password",
+									"value": "divek@123",
+									"type": "text",
+									"description": ""
+								}
+							]
+						},
+						"description": "get user info"
+					},
+					"response": []
+				},
+				{
+					"name": "update-user",
+					"request": {
+						"url": "{{url}}/update-user/5dbfe3e9f7cb1a9099bcf7cc",
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/x-www-form-urlencoded",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "email",
+									"value": "divek@email.com",
+									"type": "text",
+									"description": ""
+								},
+								{
+									"key": "name",
+									"value": "divekJohn",
+									"type": "text",
+									"description": ""
+								},
+								{
+									"key": "password",
+									"value": "divek@123",
+									"type": "text",
+									"description": ""
+								}
+							]
+						},
+						"description": "update user"
+					},
+					"response": []
+				},
+				{
+					"name": "delete user",
+					"request": {
+						"url": "{{url}}/delete-user/5dbfe3e9f7cb1a9099bcf7cc",
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/x-www-form-urlencoded",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "email",
+									"value": "divek@email.com",
+									"type": "text",
+									"description": ""
+								},
+								{
+									"key": "name",
+									"value": "divekJohn",
+									"type": "text",
+									"description": ""
+								},
+								{
+									"key": "password",
+									"value": "divek@123",
+									"type": "text",
+									"description": ""
+								}
+							]
+						},
+						"description": "delete user"
+					},
+					"response": []
+				},
+				{
+					"name": "login",
+					"request": {
+						"url": "{{url}}/login",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/x-www-form-urlencoded",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "email",
+									"value": "divek@email.com",
+									"type": "text",
+									"description": ""
+								},
+								{
+									"key": "password",
+									"value": "divek@123",
+									"type": "text",
+									"description": ""
+								}
+							]
+						},
+						"description": "login user"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "places",
+			"description": "",
+			"item": [
+				{
+					"name": "add-place",
+					"request": {
+						"url": "{{url}}/add-place",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"user\":\"5dbfe0dc5da65d920966a69c\",\r\n\"name\":\"my place\",\r\n\"address\":\"bangalore\",\r\n\"description\":\"on of my first place\",\r\n\"images\":[\"5dbff5e986c4d885d150cc4d\",\"5dbff5e986c4d885d150cc4c\"]}"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "update-place",
+					"request": {
+						"url": "{{url}}/update-place/5dbff8f8a7a6457539404c28",
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"user\":\"5dbfe0dc5da65d920966a69c\",\r\n\"name\":\"my placeupdate\",\r\n\"address\":\"bangalore\",\r\n\"description\":\"on of my first place\",\r\n\"images\": [\"5dbff5e986c4d885d150cc4d\",\"5dbff5e986c4d885d150cc4c\"]\r\n\t\r\n}"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "places by user",
+					"request": {
+						"url": "{{url}}/places/5dbfe0dc5da65d920966a69c",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"user\":\"5dbfe0dc5da65d920966a69c\",\r\n\"name\":\"my placeupdate\",\r\n\"address\":\"bangalore\",\r\n\"description\":\"on of my first place\",\r\n\"images\": [\"5dbff5e986c4d885d150cc4d\",\"5dbff5e986c4d885d150cc4c\"]\r\n\t\r\n}"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "place-info",
+					"request": {
+						"url": "{{url}}/place-info/5dbff8f8a7a6457539404c28",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"user\":\"5dbfe0dc5da65d920966a69c\",\r\n\"name\":\"my placeupdate\",\r\n\"address\":\"bangalore\",\r\n\"description\":\"on of my first place\",\r\n\"images\": [\"5dbff5e986c4d885d150cc4d\",\"5dbff5e986c4d885d150cc4c\"]\r\n\t\r\n}"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "delete place",
+					"request": {
+						"url": "{{url}}/delete-place/5dbff8f8a7a6457539404c28",
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"user\":\"5dbfe0dc5da65d920966a69c\",\r\n\"name\":\"my placeupdate\",\r\n\"address\":\"bangalore\",\r\n\"description\":\"on of my first place\",\r\n\"images\": [\"5dbff5e986c4d885d150cc4d\",\"5dbff5e986c4d885d150cc4c\"]\r\n\t\r\n}"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Search places",
+					"request": {
+						"url": "{{url}}/places/5dbfe3e9f7cb1a9099bcf7cc/Goa",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"user\":\"5dbfe0dc5da65d920966a69c\",\r\n\"name\":\"my place\",\r\n\"address\":\"bangalore\",\r\n\"description\":\"on of my first place\",\r\n\"images\":[\"5dbff5e986c4d885d150cc4d\",\"5dbff5e986c4d885d150cc4c\"]}"
+						},
+						"description": ""
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "files",
+			"description": "",
+			"item": [
+				{
+					"name": "upload files",
+					"request": {
+						"url": "{{url}}/upload",
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "files",
+									"value": "",
+									"description": "",
+									"type": "file"
+								},
+								{
+									"key": "userId",
+									"value": "5dbfe0dc5da65d920966a69c",
+									"description": "",
+									"type": "text"
+								},
+								{
+									"key": "caption",
+									"value": "test",
+									"description": "",
+									"type": "text"
+								}
+							]
+						},
+						"description": "files "
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

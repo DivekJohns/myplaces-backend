@@ -1,0 +1,43 @@
+{
+  "name": "truckish-backend",
+  "version": "1.0.0",
+  "description": "API's for truckish",
+  "main": "server.js",
+  "scripts": {
+    "start": "node ./app/server.js",
+    "dev": "nodemon --inspect ./app/server.js",
+    "lint": "eslint .",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "APIS",
+    "Database",
+    "truckish"
+  ],
+  "author": "Divek",
+  "license": "",
+  "dependencies": {
+    "@sendgrid/mail": "^6.4.0",
+    "app-root-path": "^2.2.1",
+    "bcrypt": "^3.0.6",
+    "body-parser": "^1.19.0",
+    "cors": "^2.8.5",
+    "dotenv": "^8.2.0",
+    "ejs": "^2.6.2",
+    "express": "^4.17.1",
+    "helmet": "^3.21.2",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^5.6.4",
+    "morgan": "^1.9.1",
+    "multer": "^1.4.2",
+    "sendgrid": "^5.2.3",
+    "winston": "^3.2.1",
+    "winston-daily-rotate-file": "^3.9.0"
+  },
+  "devDependencies": {
+    "eslint": "^5.16.0",
+    "eslint-config-airbnb-base": "^13.2.0",
+    "eslint-plugin-import": "^2.18.2",
+    "nodemon": "^1.19.4"
+  }
+}
